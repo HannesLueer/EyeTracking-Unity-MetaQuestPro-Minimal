@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.meta.movement": "file:C:/Users/VR-Reading-Support/Downloads/Unity-Movement-4.1.0/Unity-Movement-4.1.0",
     "com.meta.xr.sdk.all": "60.0.0",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.feature.development": "1.0.1",

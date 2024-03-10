@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.meta.movement": {
-      "version": "file:C:/Users/VR-Reading-Support/Downloads/Unity-Movement-4.1.0/Unity-Movement-4.1.0",
+      "version": "file:Unity-Movement-4.1.0",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.6",
         "com.unity.animation.rigging": "1.2.1"

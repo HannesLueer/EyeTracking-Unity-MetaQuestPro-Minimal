@@ -411,7 +411,6 @@ GameObject:
   - component: {fileID: 441943919}
   - component: {fileID: 441943920}
   - component: {fileID: 441943921}
-  - component: {fileID: 441943922}
   m_Layer: 0
   m_Name: CenterEyeAnchor
   m_TagString: Untagged
@@ -500,26 +499,9 @@ MonoBehaviour:
   layersToInclude:
     serializedVersion: 2
     m_Bits: 4294967295
-  centerEyeAnchor: {fileID: 441943918}
+  leftEyeAnchor: {fileID: 1786622372}
+  rightEyeAnchor: {fileID: 1302145876}
   drawDebugLine: 0
---- !u!114 &441943922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441943918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28dd40a6d175d01498e0477360d6c070, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Eye: 0
-  ConfidenceThreshold: 0.5
-  ApplyPosition: 1
-  ApplyRotation: 1
-  ReferenceFrame: {fileID: 180345097}
-  TrackingMode: 1
 --- !u!1 &530957921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,13 +1017,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1302145877}
   - component: {fileID: 1302145878}
+  - component: {fileID: 1302145879}
   m_Layer: 0
   m_Name: RightEyeAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1302145877
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,6 +1091,24 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1302145879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302145876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28dd40a6d175d01498e0477360d6c070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eye: 1
+  ConfidenceThreshold: 0.5
+  ApplyPosition: 1
+  ApplyRotation: 1
+  ReferenceFrame: {fileID: 180345097}
+  TrackingMode: 1
 --- !u!1 &1432582687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,13 +1182,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1786622373}
   - component: {fileID: 1786622374}
+  - component: {fileID: 1786622375}
   m_Layer: 0
   m_Name: LeftEyeAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1786622373
 Transform:
   m_ObjectHideFlags: 0
@@ -1254,6 +1256,24 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1786622375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786622372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28dd40a6d175d01498e0477360d6c070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Eye: 0
+  ConfidenceThreshold: 0.5
+  ApplyPosition: 1
+  ApplyRotation: 1
+  ReferenceFrame: {fileID: 180345097}
+  TrackingMode: 1
 --- !u!1 &1828601335
 GameObject:
   m_ObjectHideFlags: 0

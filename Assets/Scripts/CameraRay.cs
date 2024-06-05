@@ -8,7 +8,10 @@ public class CameraRay : MonoBehaviour
     private LayerMask layersToInclude;
 
     [SerializeField]
-    private GameObject centerEyeAnchor;
+    private GameObject leftEyeAnchor;
+
+    [SerializeField]
+    private GameObject rightEyeAnchor;
 
     [SerializeField]
     private bool drawDebugLine;
@@ -28,11 +31,18 @@ public class CameraRay : MonoBehaviour
     void Update()
     {
         // get values
-        Vector3 headPosition = centerEyeAnchor.transform.position;
-        Quaternion headRotation = centerEyeAnchor.transform.rotation;
+        Vector3 leftEyePosition = leftEyeAnchor.transform.position;
+        Quaternion leftEyeRotation = leftEyeAnchor.transform.rotation;
+        Vector3 rightEyePosition = rightEyeAnchor.transform.position;
+        Quaternion rightEyeRotation = rightEyeAnchor.transform.rotation;
 
-        Vector3 start = headPosition;
-        Vector3 end = headRotation * Vector3.forward * rayDistance;
+        // calculate average
+        Vector3 avgEyePosition = (leftEyePosition + rightEyePosition) / 2;
+        Quaternion avgEyeRotation = Quaternion.Lerp(leftEyeRotation, rightEyeRotation, .1f);
+
+        // set start and end
+        Vector3 start = avgEyePosition;
+        Vector3 end = avgEyeRotation * Vector3.forward * rayDistance;
 
         // draw line
         if (drawDebugLine)
